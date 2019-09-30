@@ -15,6 +15,7 @@ topics I have covered. The bolded items are the ones that I was responsible for 
     * Information Gain Heuristic
     * __Variance Gain Heuristic__
 2. Text Classification
+    * __Text Mining/Cleaning__
     * __Naive Bayes__
     * Perceptron
     * Linear Regression
