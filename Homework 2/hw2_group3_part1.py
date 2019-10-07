@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 from nltk.corpus import wordnet as wn
 from nltk.tokenize import word_tokenize
 
-if False:       # Must be True if nltk packages have not been installed yet
+if True:       # Must be True if nltk packages have not been installed yet
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     nltk.download('stopwords')
@@ -191,7 +191,7 @@ def getAccuracy(dataSetDirectory, filePurpose):
         else:
             nIncorrect += 0
     print("\nThis model had %.2f %% accuracy on the data." % (nCorrect / (nCorrect + nIncorrect) * 100))
-
+    return trainTerms
 
 ''' 
 Call this model as follows:
@@ -203,4 +203,17 @@ If the 'train' and 'test' files are in subfolders, call the model as follows:
 
 >>> getAccuracy('dataset 3/sub1/sub2', 'train')     # Should be 100% accurate
 >>> getAccuracy('dataset 1/sub1/sub2', 'test')      # Will print the accuracy of the model on the test data
+
+RESULTS:
+Dataset 1:
+    Training data: 99.34%
+    Test data:     95.92%
+    
+Dataset 2:
+    Training data: 100.00%
+    Test data:     96.40%
+    
+Dataset 3:
+    Training data: 100.00%
+    Test data:     100.00%
 '''
